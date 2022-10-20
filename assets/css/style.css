@@ -10,6 +10,10 @@
     block-size: cover;
 }
 
+.nav2 {
+    height: 117px;
+}
+
 .img-logo {
     width: 175px;
 }
@@ -54,8 +58,14 @@ footer a {
 
 .footer-gradient {
             background-image: linear-gradient(to right, #1c3643, #1f5271);        
-           }
+}
 
  a:hover {
     color: rgb(218, 211, 211) !important;
 } 
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 375px) {
+    
+}
