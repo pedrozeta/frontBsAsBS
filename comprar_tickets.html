@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Final front</title>
+    <title>Comprar tickets</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
@@ -64,27 +64,58 @@
     </section>
 
     <!--FORMULARIO-->
-    <section class="container my-5">
+    <section class="container">
         <div class="col-12 text-center">
             <h2 class="text-black text-uppercase h3">venta</h2>
-            <h3 class="text-black text-uppercase h1 display-2"><strong>valor de ticket &#36;200</strong></h3>
-            <p>Anótate como orador para dar una <abbr title="attribute">charla ignite</abbr>.
-                 ¡Cuéntanos de que quieres hablar!</p>
+            <h3 class="text-black text-uppercase h1 display-2">
+              <strong>valor de ticket &#36;200</strong></h3>
         </div>
         <form action="" class="form-group-container">
             <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
+                  <input type="text" class="form-control form-control-lg" placeholder="Nombre" 
+                  aria-label="Nombre">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
+                  <input type="text" class="form-control form-control-lg" placeholder="Apellido" 
+                  aria-label="Apellido">
                 </div>
               </div>
-              <div class="pt-4 ">
-                <textarea class="form-control container-fluid rounded-2 fs-3" name="textarea" id="textarea" placeholder="Sobre qué quieres hablar?" rows="6"></textarea>
+              <div class="row my-4">
+                <div class="col">
+                  <input type="text" class="form-control form-control-lg" placeholder="Correo" 
+                  aria-label="Correo">
+                </div>
+              </div>
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <label for="inputCantidad" class="form-label lead">&nbsp;&nbsp;<strong>Cantidad</strong></label>
+                  <input type="text" class="form-control form-control-lg" id="inputCantidad" 
+                  placeholder="cantidad">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCategoria" class="form-label lead">&nbsp;&nbsp;<strong>Categoría</strong></label>
+                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Estudiante</option>
+                    <option value="2">Trainee</option>
+                    <option value="3">Junior</option>
+                  </select>
+                </div>
             </div>
-            <p>Recuerda incluir un texto para tu charla</p>
-            <button class="btn fs-4 w-100" type="submit">Enviar</button>
+            <div class="col-md-12">
+              <div class="alert alert-primary" role="alert">
+                Total a pagar: $
+              </div>
+            </div>
+          <div class="row my-4">
+          <div class="d-grid col-6">
+            <button class="btn btn-lg btn-success1 text-white" type="button">Borrar</button>
+          </div>
+            <div class="d-grid col-6">  
+            <button class="btn btn-lg btn-success1 text-white" type="button">Resumen</button>
+          </div>
+        </div>
         </form>
     </section>
     <!--FOOTER-->
