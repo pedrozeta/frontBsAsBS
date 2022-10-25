@@ -19,7 +19,7 @@
                 <span class="col-2 text-white ms-5">Conf Bs As</span>
                 <!--LINKS-->
                 <div class="col-10 col-md-auto d-flex align-items-center flex-wrap justify-content-around">
-                  <a href="index.html" class="text-white pr-3">La conferencia</a>  
+                  <a href="#" class="text-white pr-3">La conferencia</a>  
                   <a href="#" class="nav-item link-secondary pr-3">Los oradores</a>
                   <a href="#" class="nav-item link-secondary pr-3">El lugar y la fecha</a>
                   <a href="#" class="nav-item link-secondary pr-3">Conviértete en orador</a>
@@ -95,16 +95,15 @@
                 </div>
                 <div class="col-md-6">
                   <label for="inputCategoria" class="form-label lead">&nbsp;&nbsp;<strong>Categoría</strong></label>
-                  <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                    <option selected>Seleccionar</option>
-                    <option value="1">Estudiante</option>
-                    <option value="2">Trainee</option>
-                    <option value="3">Junior</option>
+                  <select id="categoria" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected value="estudiante">Estudiante</option>
+                    <option value="trainee">Trainee</option>
+                    <option value="junior">Junior</option>
                   </select>
                 </div>
             </div>
             <div class="col-md-12">
-              <div class="alert alert-primary" role="alert">
+              <div id="cantTotal2" class="alert alert-primary" role="alert">
                 Total a pagar: $
               </div>
             </div>
@@ -113,7 +112,7 @@
             <button class="btn btn-lg btn-success1 text-white" type="button">Borrar</button>
           </div>
             <div class="d-grid col-6">  
-            <button class="btn btn-lg btn-success1 text-white" type="button">Resumen</button>
+            <button id="calcular" onclick="resumen()" class="btn btn-lg btn-success1 text-white" type="button">Resumen</button>
           </div>
         </div>
         </form>
@@ -130,7 +129,7 @@ align-items-center">
     <div class="col-4 col-md-1"><a class="text-white" href="#">Estudiantes</a></div>
 </footer>
     
-    
+   <script src="assets/js/compras.js"></script> 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" 
