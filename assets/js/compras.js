@@ -1,28 +1,38 @@
-var cantidad = document.getElementById('inputCantidad')
-const calcular = document.getElementById('calcular')
-const categoria = document.getElementById('categoria')
-const total = document.getElementById('cantTotal2')
-
-
+const formulario = document.getElementById("formulario");
 
 function resumen(){
-    var totalaPagar = 0;
-    var precio = 200;
-    var descuentoEstudiante = 0.8;
-    cantidad = parseInt(cantidad)
-    console.log(categoria.value)
-    console.log(cantidad.value)
-    cantidad.value
-    if (categoria.value == "estudiante"){
-        alert("Tickets para estudiante.")
-        totalaPagar = (cantidad * precio * descuentoEstudiante)
+    let cantidad = document.getElementById('inputCantidad').value;
+    let categoria = document.getElementById('categoria').value;
+    const precio = 200;
+    let descuentoEstudiante = 0.2;
+    let descuentoTrainee = 0.5;
+    let descuentoJunior = 0.85;
+    if (categoria == "estudiante"){
+        alert("  Tickets para estudiante.\n  Tiene un descuento del 80%.")
+        let totalaPagar = (cantidad * precio * descuentoEstudiante);
+        document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     } else 
-    if (categoria.value == "trainee"){
-        alert("Tickets para trainee.")
+    if (categoria == "trainee"){
+        alert("  Tickets para trainee.\n  Tiene un descuento del 50%.");
+        let totalaPagar = (cantidad * precio * descuentoTrainee);
+        document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     } else 
     {
-        alert("Tickets para junior.")
+        alert("  Tickets para junior.\n  Tiene un descuento del 15%.");
+        let totalaPagar = (cantidad * precio * descuentoJunior);
+        document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     }
-    total.innerHTML = "Total a pagar: $ "+ totalaPagar
-    console.log(totalaPagar)
+}
+
+document.getElementById('calcular').onclick = function(){
+    resumen();
+}
+
+function borrar(){
+    formulario.reset();
+    document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $";
+}    
+
+document.getElementById("borrar").onclick = function(){ 
+    borrar(); 
 }
