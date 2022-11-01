@@ -1,5 +1,4 @@
 const formulario = document.getElementById("formulario");
-
 function resumen(){
     let cantidad = document.getElementById('inputCantidad').value;
     let categoria = document.getElementById('categoria').value;
@@ -8,17 +7,17 @@ function resumen(){
     let descuentoTrainee = 0.5;
     let descuentoJunior = 0.85;
     if (categoria == "estudiante"){
-        alert("  Tickets para estudiante.\n  Tiene un descuento del 80%.")
+        alert("  Tickets para estudiante.\n  Cantidad: " + cantidad +".\n  Tiene un descuento del 80%.")
         let totalaPagar = (cantidad * precio * descuentoEstudiante);
         document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     } else 
     if (categoria == "trainee"){
-        alert("  Tickets para trainee.\n  Tiene un descuento del 50%.");
+        alert("  Tickets para trainee.\n  Cantidad: " + cantidad + ".\n  Tiene un descuento del 50%.");
         let totalaPagar = (cantidad * precio * descuentoTrainee);
         document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     } else 
     {
-        alert("  Tickets para junior.\n  Tiene un descuento del 15%.");
+        alert("  Tickets para junior.\n  Cantidad: " + cantidad + ".\n  Tiene un descuento del 15%.");
         let totalaPagar = (cantidad * precio * descuentoJunior);
         document.getElementById("cantTotal2").innerHTML = "Total a Pagar: $" + totalaPagar;
     }
