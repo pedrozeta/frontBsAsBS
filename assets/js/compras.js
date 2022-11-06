@@ -24,7 +24,7 @@
         }
     } else
     if (isNaN(cantidad)){
-        alert ("   \"" + cantidad + "\" no es un número.\n  Presione borrar y vuelva a empezar.");
+        alert ("   \"" + cantidad + "\" no es un número entero.\n  Presione borrar y vuelva a empezar.");
     } else {
         alert ("  \"" + cantidad + "\" no es un número entero.\n  Presione borrar y vuelva a empezar.");
     }
